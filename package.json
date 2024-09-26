@@ -1,8 +1,21 @@
 {
   "name": "longdomap-react-native",
-  "version": "1.0.0",
+  "version": "0.3.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "author": "bankji <jirapan@mm.co.th> <jirapan@mm.co.th> (https://github.com/bankjirapan)",
+  "bugs": {
+    "url": "https://github.com/bankjirapan/longdomap-react-native.git/issues"
+  },
+  "homepage": "https://github.com/bankjirapan/longdomap-react-native.git#readme",
+  "keywords": [
+    "longdomap react-native",
+    "longdomap",
+    "longdo-map",
+    "react-native",
+    "ios",
+    "android"
+  ],
   "scripts": {
     "lint": "eslint .",
     "build": "tsc",
@@ -11,6 +24,9 @@
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-native": ">=0.71.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "expo-constants": "^16.0.2",
