@@ -1,23 +1,38 @@
 {
-    "name": "react-native-hello-world-lib",
-    "version": "1.0.0",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "build": "tsc",
-        "test": "jest"
-    },
-    "peerDependencies": {
-        "react": ">=18.0.0",
-        "react-native": ">=0.71.0"
-    },
-    "devDependencies": {
-        "@types/jest": "^29.5.13",
-        "@types/react": "^18.3.9",
-        "@types/react-native": "^0.73.0",
-        "jest": "^29.7.0",
-        "react-native-builder-bob": "^0.30.2",
-        "react-test-renderer": ">=18.3.1",
-        "typescript": "^5.6.2"
-    }
+  "name": "react-native-hello-world-lib",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.71.0"
+  },
+  "dependencies": {
+    "expo-constants": "^16.0.2",
+    "lefthook": "^1.7.16",
+    "react-native-webview": "13.6.3"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.0.2",
+    "commitlint": "^17.0.2",
+    "@types/jest": "^29.5.13",
+    "@types/react": "^18.3.9",
+    "@types/react-native": "^0.73.0",
+    "jest": "^29.7.0",
+    "react-native-builder-bob": "^0.30.2",
+    "react-test-renderer": ">=18.3.1",
+    "typescript": "^5.6.2",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1"
+  }
 }
