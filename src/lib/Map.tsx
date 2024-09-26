@@ -6,12 +6,12 @@ import { Dimensions, StyleSheet, View } from 'react-native';
 interface MapViewProps {
   language?: string;
   [key: string]: string | number | boolean | object | undefined;
-  layer: string;
-  zoom: number;
-  zoomRange: number[];
-  location: { lon: number; lat: number };
-  ui: object;
-  lastView: boolean;
+  layer?: string;
+  zoom?: number;
+  zoomRange?: number[];
+  location?: { lon: number; lat: number };
+  ui?: object;
+  lastView?: boolean;
 }
 const styles = StyleSheet.create({
   container: {
