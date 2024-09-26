@@ -1,6 +1,6 @@
 import Constants from 'expo-constants';
 import { Platform } from 'react-native';
-export let Const = {
+export const Const = {
     server: 'api.longdo.com/map3/',
     bundleId: '',
     apiKey: '',

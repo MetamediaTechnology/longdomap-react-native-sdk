@@ -1,4 +1,4 @@
-export declare let Const: {
+export declare const Const: {
     server: string;
     bundleId: string | undefined;
     apiKey: string | undefined;
