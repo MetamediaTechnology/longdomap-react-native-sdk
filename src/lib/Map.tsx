@@ -5,12 +5,12 @@ import { Dimensions, StyleSheet, View } from 'react-native';
 
 interface MapViewProps {
   language?: string;
-  [key: string]: string | number | boolean | object | undefined;
+  [key: string]: any;
   layer?: string;
   zoom?: number;
-  zoomRange?: number[];
+  zoomRange?: any;
   location?: { lon: number; lat: number };
-  ui?: object;
+  ui?: any;
   lastView?: boolean;
 }
 const styles = StyleSheet.create({
@@ -21,6 +21,12 @@ const styles = StyleSheet.create({
 export default class MapView extends Component<MapViewProps> {
   static defaultProps = {
     language: '',
+    layer: 'NORMAL',
+    zoom: 10,
+    zoomRange: [5, 20],
+    location: { lon: 100, lat: 13 },
+    ui: {},
+    lastView: false,
   };
 
   #web: WebView | null = null;
