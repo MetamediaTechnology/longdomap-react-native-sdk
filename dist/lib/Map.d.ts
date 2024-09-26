@@ -2,15 +2,15 @@ import { Component } from 'react';
 interface MapViewProps {
     language?: string;
     [key: string]: string | number | boolean | object | undefined;
-    layer: string;
-    zoom: number;
-    zoomRange: number[];
-    location: {
+    layer?: string;
+    zoom?: number;
+    zoomRange?: number[];
+    location?: {
         lon: number;
         lat: number;
     };
-    ui: object;
-    lastView: boolean;
+    ui?: object;
+    lastView?: boolean;
 }
 export default class MapView extends Component<MapViewProps> {
     #private;
