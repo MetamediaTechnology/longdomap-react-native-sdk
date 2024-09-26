@@ -1,6 +1,6 @@
 {
   "name": "longdomap-react-native",
-  "version": "0.3.1",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "bankji <jirapan@mm.co.th> <jirapan@mm.co.th> (https://github.com/bankjirapan)",
