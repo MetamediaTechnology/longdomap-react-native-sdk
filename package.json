@@ -1,13 +1,13 @@
 {
   "name": "longdomap-react-native-sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "bankji <jirapan@mm.co.th> <jirapan@mm.co.th> (https://github.com/bankjirapan)",
   "bugs": {
-    "url": "https://github.com/bankjirapan/longdomap-react-native-sdk.git/issues"
+    "url": "https://github.com/MetamediaTechnology/longdomap-react-native-sdk/issues"
   },
-  "homepage": "https://github.com/bankjirapan/longdomap-react-native-sdk.git#readme",
+  "homepage": "https://github.com/MetamediaTechnology/longdomap-react-native-sdk.git#readme",
   "keywords": [
     "longdomap react-native",
     "longdomap",
