@@ -6,7 +6,7 @@ import { Dimensions, StyleSheet, View } from 'react-native';
 interface MapViewProps {
   language?: string;
   [key: string]: any;
-  layer?: string;
+  layer?: any;
   zoom?: number;
   zoomRange?: any;
   location?: { lon: number; lat: number };
