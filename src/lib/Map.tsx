@@ -35,12 +35,14 @@ export default class MapView extends Component<MapViewProps> {
   render() {
     const windowWidth = Dimensions.get('window').width;
     const windowHeight = Dimensions.get('window').height;
-
+    
     let events = '';
-    for (const prop in this.props) {
-      if (prop.startsWith('on')) {
-        events += `,"${prop}"`;
-        (this as any)[prop] = this.props[prop];
+    if (this.props && typeof this.props === 'object') {
+      for (const prop in this.props) {
+        if (typeof prop === 'string' && prop.startsWith('on')) {
+          events += `,"${prop}"`;
+          (this as any)[prop] = this.props[prop];
+        }
       }
     }
 
