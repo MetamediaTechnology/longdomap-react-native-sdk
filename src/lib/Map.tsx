@@ -30,12 +30,12 @@ export default class MapView extends Component<MapViewProps> {
   };
 
   #web: WebView | null = null;
-  #baseUrl: string = `https://${(Const.bundleId ?? '').toLowerCase()}/`;
+  #baseUrl: string = `https://${(Const.server ?? '').toLowerCase()}/`;
   #callback: ((data: any) => void) | undefined;
   render() {
     const windowWidth = Dimensions.get('window').width;
     const windowHeight = Dimensions.get('window').height;
-    
+
     let events = '';
     if (this.props && typeof this.props === 'object') {
       for (const prop in this.props) {
@@ -85,14 +85,14 @@ export default class MapView extends Component<MapViewProps> {
               placeholder: placeholder
             });
             map.Ui.Geolocation?.visible(false);
-            for (const event of [${events.substring(1)}]) {
-              try {
-                map.Event.bind(event[2].toLocaleLowerCase() + event.substring(3),
-                  data => ReactNativeWebView.postMessage(JSON.stringify({ $event: event, data: serialize(data) })));
-              } catch (e) {
-                console.log(e);
-              }
-            }
+            // for (const event of [${events.substring(1)}]) {
+            //   try {
+            //     map.Event.bind(event[2].toLocaleLowerCase() + event.substring(3),
+            //       data => ReactNativeWebView.postMessage(JSON.stringify({ $event: event, data: serialize(data) })));
+            //   } catch (e) {
+            //     console.log(e);
+            //   }
+            // }
             map.Util = longdo.Util;
             map.toJSON = map.Overlays.toJSON = map.Ui.toJSON = () => ({});
           }

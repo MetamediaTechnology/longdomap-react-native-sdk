@@ -19,7 +19,7 @@ export default class MapView extends Component {
         lastView: false,
     };
     #web = null;
-    #baseUrl = `https://${(Const.bundleId ?? '').toLowerCase()}/`;
+    #baseUrl = `https://${(Const.server ?? '').toLowerCase()}/`;
     #callback;
     render() {
         const windowWidth = Dimensions.get('window').width;
@@ -72,14 +72,14 @@ export default class MapView extends Component {
               placeholder: placeholder
             });
             map.Ui.Geolocation?.visible(false);
-            for (const event of [${events.substring(1)}]) {
-              try {
-                map.Event.bind(event[2].toLocaleLowerCase() + event.substring(3),
-                  data => ReactNativeWebView.postMessage(JSON.stringify({ $event: event, data: serialize(data) })));
-              } catch (e) {
-                console.log(e);
-              }
-            }
+            // for (const event of [${events.substring(1)}]) {
+            //   try {
+            //     map.Event.bind(event[2].toLocaleLowerCase() + event.substring(3),
+            //       data => ReactNativeWebView.postMessage(JSON.stringify({ $event: event, data: serialize(data) })));
+            //   } catch (e) {
+            //     console.log(e);
+            //   }
+            // }
             map.Util = longdo.Util;
             map.toJSON = map.Overlays.toJSON = map.Ui.toJSON = () => ({});
           }
