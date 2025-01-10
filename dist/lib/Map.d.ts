@@ -26,7 +26,7 @@ export default class MapView extends Component<MapViewProps> {
         ui: {};
         lastView: boolean;
     };
-    render(): any;
+    render(): import("react/jsx-runtime").JSX.Element;
     call(method: string, ...args: any[]): Promise<any>;
     objectCall(object: string, method: string, ...args: any[]): Promise<any>;
     run(script: string): void;
