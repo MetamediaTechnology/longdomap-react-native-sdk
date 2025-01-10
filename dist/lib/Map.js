@@ -11,6 +11,12 @@ const styles = StyleSheet.create({
 export default class MapView extends Component {
     static defaultProps = {
         language: '',
+        layer: 'NORMAL',
+        zoom: 10,
+        zoomRange: [5, 20],
+        location: { lon: 100, lat: 13 },
+        ui: {},
+        lastView: false,
     };
     #web = null;
     #baseUrl = `https://${(Const.bundleId ?? '').toLowerCase()}/`;

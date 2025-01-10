@@ -1,6 +1,6 @@
 {
   "name": "longdomap-react-native-sdk",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "bankji <jirapan@mm.co.th> <jirapan@mm.co.th> (https://github.com/bankjirapan)",
@@ -31,7 +31,7 @@
   "dependencies": {
     "expo-constants": "^16.0.2",
     "lefthook": "^1.7.16",
-    "react-native-webview": "11.26.1"
+    "react-native-webview": "13.12.5"
   },
   "commitlint": {
     "extends": [
