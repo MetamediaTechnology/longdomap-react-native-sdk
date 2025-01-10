@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
 export default class MapView extends Component {
     static defaultProps = {
         language: '',
-        layer: 'NORMAL',
         zoom: 10,
         zoomRange: [5, 20],
         location: { lon: 100, lat: 13 },
@@ -62,7 +61,6 @@ export default class MapView extends Component {
             onerror = (message, source, lineno, colno) => console.log(message + ' @ ' + source + '#L' + lineno + ':' + colno);
             
             map = new longdo.Map({
-              layer: parse(${JSON.stringify(this.props.layer)}),
               zoom: ${this.props.zoom},
               zoomRange: ${JSON.stringify(this.props.zoomRange)},
               location: ${JSON.stringify(this.props.location)},
@@ -72,14 +70,14 @@ export default class MapView extends Component {
               placeholder: placeholder
             });
             map.Ui.Geolocation?.visible(false);
-            // for (const event of [${events.substring(1)}]) {
-            //   try {
-            //     map.Event.bind(event[2].toLocaleLowerCase() + event.substring(3),
-            //       data => ReactNativeWebView.postMessage(JSON.stringify({ $event: event, data: serialize(data) })));
-            //   } catch (e) {
-            //     console.log(e);
-            //   }
-            // }
+            for (const event of [${events.substring(1)}]) {
+              try {
+                map.Event.bind(event[2].toLocaleLowerCase() + event.substring(3),
+                  data => ReactNativeWebView.postMessage(JSON.stringify({ $event: event, data: serialize(data) })));
+              } catch (e) {
+                console.log(e);
+              }
+            }
             map.Util = longdo.Util;
             map.toJSON = map.Overlays.toJSON = map.Ui.toJSON = () => ({});
           }

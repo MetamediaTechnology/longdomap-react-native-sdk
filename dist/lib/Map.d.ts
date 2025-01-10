@@ -16,7 +16,6 @@ export default class MapView extends Component<MapViewProps> {
     #private;
     static defaultProps: {
         language: string;
-        layer: string;
         zoom: number;
         zoomRange: number[];
         location: {
