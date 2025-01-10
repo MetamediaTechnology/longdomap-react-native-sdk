@@ -1,5 +1,5 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { WebView } from 'react-native-webview';
 import { Const } from './Const';
 import { Dimensions, StyleSheet, View } from 'react-native';
