@@ -18,7 +18,7 @@ export default class MapView extends Component {
         lastView: false,
     };
     #web = null;
-    #baseUrl = `https://${(Const.server ?? '').toLowerCase()}/`;
+    #baseUrl = `https://${(Const.bundleId ?? '').toLowerCase()}/`;
     #callback;
     render() {
         const windowWidth = Dimensions.get('window').width;
