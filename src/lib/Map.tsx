@@ -29,7 +29,7 @@ export default class MapView extends Component<MapViewProps> {
   };
 
   #web: WebView | null = null;
-  #baseUrl: string = `https://${(Const.server ?? '').toLowerCase()}/`;
+  #baseUrl: string = `https://${(Const.bundleId ?? '').toLowerCase()}/`;
   #callback: ((data: any) => void) | undefined;
   render() {
     const windowWidth = Dimensions.get('window').width;
